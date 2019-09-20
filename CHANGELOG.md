@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+#### Visual updates to the warning text component
+
+Align ‘Warning text’ icon with first line of the content fixing [#1352](https://github.com/alphagov/govuk-frontend/issues/1352) Some changes were made to the size and spacing of the icon to help with positioning.
+
+- [Pull request #1578: Change position and spacing relationship of warning text icon](https://github.com/alphagov/govuk-frontend/pull/1578)
+
 ### Fixes
 - [Pull request #1574: Make form elements scale correctly when text resized by user](https://github.com/alphagov/govuk-frontend/pull/1574).
 
