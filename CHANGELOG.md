@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+### New features
+
+#### Allow attributes to be set on `<body>` of template
+
+You can now set attributes in the `<body>` element of page template.
+
+- [Pull request #1623: Allow attributes to be set on template <body>](https://github.com/alphagov/govuk-frontend/pull/1623).
+
 ## 3.3.0 (Feature release)
 
 ### New features
