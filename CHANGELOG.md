@@ -4,44 +4,56 @@
 
 ### New features
 
-#### Create custom width container classes
+#### Set a specific width for wrappers
 
-You can now create custom page width container classes using the `govuk-width-container` mixin. You do this by passing in the required maximum width of the container.
+You can now:
+
+- create your own Sass classes with specific widths
+- add those classes to the `.govuk-width-container` wrapper using Nunjucks
+
+This means you can set specific widths for the:
+
+- [page wrapper](https://design-system.service.gov.uk/styles/layout/#page-wrappers)
+- [header component](https://design-system.service.gov.uk/components/header/)
+- [footer component](https://design-system.service.gov.uk/components/footer/)
+
+Include the `govuk-width-container` mixin inside your Sass class definition, and pass in the width in pixels.
 
 For example:
 
 ```scss
-.app-width-container--wide {
+.YOURAPP-width-container--wide {
   @include govuk-width-container(1200px);
 }
 ```
 
-You can use the generated classes to set the width of:
-- template container
-- header container
-- footer container
+Where `YOURAPP` is [the namespace you’re using for your app](https://design-system.service.gov.uk/get-started/extending-and-modifying-components/#use-a-unique-prefix-for-component-names).
 
-It was already possible to set the page app width with the `$govuk-page-width` variable. This new feature is useful when creating additional custom page width classes.
+If you’re using Nunjucks, add your class to the page template using the [`containerClasses` variable](https://design-system.service.gov.uk/styles/page-template/#variables).
+
+For example:
+
+```
+{% set containerClasses = "YOURAPP-width-container--wide" %}
+```
+
+Use the `$govuk-page-width` Sass variable instead if all your pages are the same width.
 
 - [Pull request #1626: Allow creating custom width containers and using them with template](https://github.com/alphagov/govuk-frontend/pull/1626).
 
-#### Set custom container classes on template
+#### Add attributes to the `<body>` element of a page
 
-You can now set classes on `.govuk-width-container` in the template with `containerClasses`. This is useful if you want to set a custom width class on the template container.
-
-- [Pull request #1626: Allow creating custom width containers and using them with template](https://github.com/alphagov/govuk-frontend/pull/1626).
-
-#### Set attributes on the `<body>` of template
-
-You can now set attributes in the `<body>` element of page template.
+You can now add attributes to the `<body>` element of a page, by using the [`bodyAttributes` variable](https://design-system.service.gov.uk/styles/page-template/#variables) in the page template.
 
 - [Pull request #1623: Allow attributes to be set on template <body>](https://github.com/alphagov/govuk-frontend/pull/1623).
 
 ### Fixes
+
 - [Pull request #1620: Only add underline to back link when href exists ](https://github.com/alphagov/govuk-frontend/pull/1620).
-- [Pull request #1609: Update hex value for secondary text to improve contrast](https://github.com/alphagov/govuk-frontend/pull/1609)
-- [Pull request #1594: Refactor handling of count message in character count Javascript](https://github.com/alphagov/govuk-frontend/pull/1594)
-- [Pull request #1631: Fix classes on character count when in error state](https://github.com/alphagov/govuk-frontend/pull/1631)
+- [Pull request #1609: Update hex value for secondary text to improve contrast](https://github.com/alphagov/govuk-frontend/pull/1609).
+- [Pull request #1594: Refactor handling of count message in character count Javascript](https://github.com/alphagov/govuk-frontend/pull/1594).
+- [Pull request #1631: Fix classes on character count when in error state](https://github.com/alphagov/govuk-frontend/pull/1631).
+
 
 ## 3.3.0 (Feature release)
 
