@@ -4,38 +4,34 @@
 
 ### New features
 
-#### Set a specific width for wrappers
+#### Add classes to the page wrapper
 
-You can now:
+If you're using Nunjucks, you can now add classes to the page wrapper using the [`containerClasses` variable](https://design-system.service.gov.uk/styles/page-template/#variables).
 
-- create your own Sass classes with specific widths
-- add those classes to the `.govuk-width-container` wrapper using Nunjucks
+Pull request #1626: Allow creating custom width containers and using them with template.
 
-This means you can set specific widths for the:
+#### Set a custom width for wrappers
+
+If you're using Sass, you can now use the `govuk-width-container` mixin to create a custom wrapper class with a specific width. You can then add that class to the following wrappers to override the width of the `govuk-width-container` class:
 
 - [page wrapper](https://design-system.service.gov.uk/styles/layout/#page-wrappers)
-- [header component](https://design-system.service.gov.uk/components/header/)
-- [footer component](https://design-system.service.gov.uk/components/footer/)
+- [header container](https://design-system.service.gov.uk/components/header/)
+- [footer container](https://design-system.service.gov.uk/components/footer/)
 
-Include the `govuk-width-container` mixin inside your Sass class definition, and pass in the width in pixels.
+To create your custom wrapper class, include the `govuk-width-container` mixin and pass in your width in pixels.
 
 For example:
 
 ```scss
-.YOURAPP-width-container--wide {
+.app-width-container--wide {
   @include govuk-width-container(1200px);
 }
 ```
 
-Where `YOURAPP` is [the namespace you’re using for your app](https://design-system.service.gov.uk/get-started/extending-and-modifying-components/#use-a-unique-prefix-for-component-names).
+If you’re using Nunjucks, you should then add your class using the:
 
-If you’re using Nunjucks, add your class to the page template using the [`containerClasses` variable](https://design-system.service.gov.uk/styles/page-template/#variables).
-
-For example:
-
-```
-{% set containerClasses = "YOURAPP-width-container--wide" %}
-```
+- `containerClasses` in the [page template](https://design-system.service.gov.uk/styles/page-template/#variables)
+- `containerClasses` option in the [header](https://design-system.service.gov.uk/components/header/) or [footer](https://design-system.service.gov.uk/components/footer/)
 
 Use the `$govuk-page-width` Sass variable instead if all your pages are the same width.
 
