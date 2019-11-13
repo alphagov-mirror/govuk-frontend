@@ -8,7 +8,7 @@
 
 If you're using Nunjucks, you can now add classes to the page wrapper using the [`containerClasses` variable](https://design-system.service.gov.uk/styles/page-template/#variables).
 
-Pull request #1626: Allow creating custom width containers and using them with template.
+[Pull request #1626: Allow creating custom width containers and using them with template](https://github.com/alphagov/govuk-frontend/pull/1626).
 
 #### Set a custom width for wrappers
 
@@ -18,7 +18,7 @@ If you're using Sass, you can now use the `govuk-width-container` mixin to creat
 - [header container](https://design-system.service.gov.uk/components/header/)
 - [footer container](https://design-system.service.gov.uk/components/footer/)
 
-To create your custom wrapper class, include the `govuk-width-container` mixin and pass in your width in pixels.
+To create your custom wrapper class, include the `govuk-width-container` mixin. Pass in the width in pixels.
 
 For example:
 
@@ -28,16 +28,16 @@ For example:
 }
 ```
 
-If you’re using Nunjucks, you should then add your class using the:
+If you’re using Nunjucks, you should then add your class using either the:
 
-- `containerClasses` in the [page template](https://design-system.service.gov.uk/styles/page-template/#variables)
+- `containerClasses` variable in the [page template](https://design-system.service.gov.uk/styles/page-template/#variables)
 - `containerClasses` option in the [header](https://design-system.service.gov.uk/components/header/) or [footer](https://design-system.service.gov.uk/components/footer/)
 
 Use the `$govuk-page-width` Sass variable instead if all your pages are the same width.
 
 - [Pull request #1626: Allow creating custom width containers and using them with template](https://github.com/alphagov/govuk-frontend/pull/1626).
 
-#### Add attributes to the `<body>` element of a page
+#### Add attributes to the <body> element of a page
 
 You can now add attributes to the `<body>` element of a page, by using the [`bodyAttributes` variable](https://design-system.service.gov.uk/styles/page-template/#variables) in the page template.
 
@@ -45,9 +45,9 @@ You can now add attributes to the `<body>` element of a page, by using the [`bod
 
 ### Fixes
 
-- [Pull request #1620: Only add underline to back link when href exists ](https://github.com/alphagov/govuk-frontend/pull/1620).
+- [Pull request #1594: Refactor handling of count message in character count JavaScript](https://github.com/alphagov/govuk-frontend/pull/1594).
 - [Pull request #1609: Update hex value for secondary text to improve contrast](https://github.com/alphagov/govuk-frontend/pull/1609).
-- [Pull request #1594: Refactor handling of count message in character count Javascript](https://github.com/alphagov/govuk-frontend/pull/1594).
+- [Pull request #1620: Only add underline to back link when href exists ](https://github.com/alphagov/govuk-frontend/pull/1620).
 - [Pull request #1631: Fix classes on character count when in error state](https://github.com/alphagov/govuk-frontend/pull/1631).
 
 
