@@ -6,6 +6,7 @@
 
 ### Fixes
 
+- [Pull request #1672: Ensure footer links look clickable](https://github.com/alphagov/govuk-frontend/pull/1672).
 - [Pull request #1655: Ensure components use public `govuk-media-query` mixin](https://github.com/alphagov/govuk-frontend/pull/1655).
 - [Pull request #1638: Check component item arrays are not empty before outputting markup](https://github.com/alphagov/govuk-frontend/pull/1638).
 
