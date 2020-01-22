@@ -91,11 +91,11 @@ This includes:
 - SCSS - for example [colours variables](https://design-system.service.gov.uk/styles/colour/)
 
 ### npm package
-The other primary way is through what is [published to npm](https://github.com/alphagov/govuk-frontend/tree/master/package).
+The other primary way is through what is [published to npm](https://github.com//package).
 
 This includes:
 
-- [JavaScript](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md#using-javascript)
+- [JavaScript](https://github.com/alphagov/govuk-frontend/blob/test_moving_docs/docs/installation/installing-with-npm.md#using-javascript)
 - SCSS - https://govuk-frontend-review.herokuapp.com/docs/
 - Nunjucks Macros (Templates)
 
