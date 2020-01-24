@@ -26,12 +26,12 @@ in your service.
 ### 1. Install with npm (recommended)
 
 We recommend [installing GOV.UK Frontend using node package manager
-(npm)](docs/installation/installing-with-npm.md).
+(npm)](https://govuk-frontend-docs-prototype.netlify.com/installing_with_npm/#install-using-node-js-package-manager-npm).
 
 ### 2. Install by using compiled files
 
 You can also [download the compiled and minified assets (CSS, JavaScript) from
-GitHub](docs/installation/installing-from-dist.md).
+GitHub](https://govuk-frontend-docs-prototype.netlify.com/installing_from_dist/#install-from-dist).
 
 ## Browser and assistive technology support
 
@@ -50,10 +50,10 @@ Using Frontend will help your service meet [level AA of WCAG 2.1](https://www.go
 
 You should also use:
 
-- [the JavaScript from GOV.UK Frontend](https://github.com/alphagov/govuk-frontend/blob/test_moving_docs/docs/installation/installing-with-npm.md#using-javascript)
-- [a separate stylesheet](https://github.com/alphagov/govuk-frontend/blob/test_moving_docs/docs/installation/supporting-internet-explorer-8.md) if you support Internet Explorer 8
+- [the JavaScript from GOV.UK Frontend](https://govuk-frontend-docs-prototype.netlify.com/installing_with_npm/#4-add-javascript-and-initialise-components)
+- [a separate stylesheet](https://govuk-frontend-docs-prototype.netlify.com/supporting_ie8/#support-internet-explorer-8) if you support Internet Explorer 8
 
-Your service will not meet level AA of WCAG 2.1 if you use [compatibility mode](https://github.com/alphagov/govuk-frontend/blob/test_moving_docs/docs/installation/compatibility.md) to use GOV.UK Frontend with old frameworks or the old colour palette.
+Your service will not meet level AA of WCAG 2.1 if you use [compatibility mode](https://govuk-frontend-docs-prototype.netlify.com/compatibility_mode/#use-our-old-frameworks-or-colours) to use GOV.UK Frontend with old frameworks or the old colour palette.
 
 You can also read the [accessibility statement for the GOV.UK Design System](https://design-system.service.gov.uk/accessibility/).
 
@@ -68,7 +68,7 @@ To be notified when there’s a new release, you can either:
 - [watch the govuk-frontend Github repository](https://help.github.com/en/articles/watching-and-unwatching-repositories)
 - join the [#govuk-design-system channel on cross-government Slack](https://ukgovernmentdigital.slack.com/app_redirect?channel=govuk-design-system)
 
-Find out how to [update with npm](https://github.com/alphagov/govuk-frontend/blob/test_moving_docs/docs/installation/updating-with-npm.md).
+Find out how to [update with npm](https://govuk-frontend-docs-prototype.netlify.com/updating_with_npm/#update-using-node-js-package-manager-npm).
 
 ## Licence
 

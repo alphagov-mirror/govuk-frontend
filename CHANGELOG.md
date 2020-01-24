@@ -188,7 +188,7 @@ For example:
 ```scss
 @import "node_modules/govuk-frontend/govuk/all";
 ```
-If you’ve [added `node_modules/govuk-frontend` as a Sass include path](https://github.com/alphagov/govuk-frontend/blob/test_moving_docs/docs/installation/installing-with-npm.md#optional-resolving-scss-import-paths), add `govuk/` to your `@import` paths:
+If you’ve [added `node_modules/govuk-frontend` as a Sass include path](https://govuk-frontend-docs-prototype.netlify.com/installing_with_npm/#simplify-sass-import-paths), add `govuk/` to your `@import` paths:
 
 ```scss
 @import "govuk/all";
@@ -216,7 +216,7 @@ import Button from 'govuk-frontend/govuk/components/button/button'
 
 ###### Update and add data-module attributes
 
-You do not need to do anything if you're using Nunjucks macros and the [`initAll`](https://github.com/alphagov/govuk-frontend/blob/test_moving_docs/docs/installation/installing-with-npm.md#option-1-include-javascript) function.
+You do not need to do anything if you're using Nunjucks macros and the [`initAll`](https://govuk-frontend-docs-prototype.netlify.com/installing_with_npm/#add-the-javascript-file-to-your-html) function.
 
 If you are not using Nunjucks macros, add a `govuk-` prefix to `data-module` attribute values. For example:
 
@@ -355,7 +355,7 @@ We've also changed the background of the following components:
 - confirmation panels - `green` instead of `turquoise`
 - links in their hover state - `dark-blue` instead of `light-blue`
 
-If you're using legacy projects like GOV.UK Elements, you can keep your current colours by [turning on compatibility mode](https://github.com/alphagov/govuk-frontend/blob/test_moving_docs/docs/installation/compatibility.md).
+If you're using legacy projects like GOV.UK Elements, you can keep your current colours by [turning on compatibility mode](https://govuk-frontend-docs-prototype.netlify.com/compatibility_mode/#use-our-old-frameworks-or-colours).
 
 Read our [blog post about why we changed the colour palette](https://designnotes.blog.gov.uk/2019/07/29/weve-updated-the-gov-uk-colours-and-font/)
 
@@ -367,7 +367,7 @@ The size and baseline of the Design System's font are now more consistent with o
 
 If you've extended or created components, you should check that your text is still vertically aligned correctly.
 
-If you're using GOV.UK Frontend and [GOV.UK Template](https://github.com/alphagov/govuk_template), you can [turn on compatibility mode](https://github.com/alphagov/govuk-frontend/blob/test_moving_docs/docs/installation/compatibility.md) to keep using the font from GOV.UK Template.
+If you're using GOV.UK Frontend and [GOV.UK Template](https://github.com/alphagov/govuk_template), you can [turn on compatibility mode](https://govuk-frontend-docs-prototype.netlify.com/compatibility_mode/#use-our-old-frameworks-or-colours) to keep using the font from GOV.UK Template.
 
 Pull requests:
 
@@ -643,7 +643,7 @@ when they're disabled.
 
 - Allow initAll to be scoped to a specific part of a page
 
-  See ["Initialise GOV.UK Frontend in only certain sections of a page"](docs/installation/installing-with-npm.md#initialise-govuk-frontend-in-only-certain-sections-of-a-page) for more information.
+  See ["Initialise GOV.UK Frontend in only certain sections of a page"](https://govuk-frontend-docs-prototype.netlify.com/installing_with_npm/#add-the-javascript-file-to-your-html) for more information.
 
   ([PR #1216](https://github.com/alphagov/govuk-frontend/pull/1216))
 
@@ -1229,7 +1229,7 @@ If you're using your own components that rely on the overflow state of the docum
 
   ([PR #984](https://github.com/alphagov/govuk-frontend/pull/984))
 
-- Turn off [compatibility mode](./docs/installation/installing-with-npm.md#compatibility-mode) by default for [GOV.UK Elements](https://github.com/alphagov/govuk_elements), [GOV.UK Template](https://github.com/alphagov/govuk_template), [GOV.UK Frontend Toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
+- Turn off [compatibility mode](https://govuk-frontend-docs-prototype.netlify.com/compatibility_mode/#use-our-old-frameworks-or-colours) by default for [GOV.UK Elements](https://github.com/alphagov/govuk_elements), [GOV.UK Template](https://github.com/alphagov/govuk_template), [GOV.UK Frontend Toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
 
   You do not need to make any changes if you do not use these projects alongside GOV.UK Frontend.
 
@@ -1250,7 +1250,7 @@ If you're using your own components that rely on the overflow state of the docum
 
   If you are using GOV.UK Frontend on with no other frameworks this should not break your project.
 
-  If you need to change this setting for compatibility with [GOV.UK Elements](https://github.com/alphagov/govuk_elements), [GOV.UK Template](https://github.com/alphagov/govuk_template), [GOV.UK Frontend Toolkit](https://github.com/alphagov/govuk_frontend_toolkit) consider enabling [compatibility mode](./docs/installation/installing-with-npm.md#compatibility-mode).
+  If you need to change this setting for compatibility with [GOV.UK Elements](https://github.com/alphagov/govuk_elements), [GOV.UK Template](https://github.com/alphagov/govuk_template), [GOV.UK Frontend Toolkit](https://github.com/alphagov/govuk_frontend_toolkit) consider enabling [compatibility mode](https://govuk-frontend-docs-prototype.netlify.com/compatibility_mode/#use-our-old-frameworks-or-colours).
 
   Otherwise, set `$govuk-typography-use-rem` to `false` before importing GOV.UK Frontend styles into your app:
   ```SCSS
@@ -1266,7 +1266,7 @@ If you're using your own components that rely on the overflow state of the docum
 
   To migrate we recommend using adding `.govuk-link` class to any anchors within a govuk-list.
 
-  If you would like to replicate this functionality without adding a class you can also enable [global styles](https://github.com/alphagov/govuk-frontend/blob/test_moving_docs/docs/installation/installing-with-npm.md#global-styles) (Note: global styles are enabled by default in the GOV.UK Prototype Kit)
+  If you would like to replicate this functionality without adding a class you can also enable global styles. (Note: global styles are enabled by default in the GOV.UK Prototype Kit)
 
   ([PR #985](https://github.com/alphagov/govuk-frontend/pull/985))
 

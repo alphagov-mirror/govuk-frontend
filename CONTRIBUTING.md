@@ -59,7 +59,7 @@ See our [coding standards for components](/docs/contributing/coding-standards/co
 See [testing and linting](/docs/contributing/testing-and-linting.md).
 
 ## Supported browsers
-Your contribution needs to work with certain browsers as set out in [README](README.md#browser-and-assistive-technology-support). See also [supporting Internet Explorer 8](/docs/installation/supporting-internet-explorer-8.md).
+Your contribution needs to work with certain browsers as set out in [README](README.md#browser-and-assistive-technology-support). See also [supporting Internet Explorer 8](https://govuk-frontend-docs-prototype.netlify.com/supporting_ie8/#support-internet-explorer-8).
 
 ## Supported assistive technology
 Your contribution needs to work with certain assistive technology as set out in [README](README.md#browser-and-assistive-technology-support).
