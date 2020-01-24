@@ -82,13 +82,13 @@ The [Semantic Versioning specification](https://semver.org/) requires a public A
 > For this system to work, you first need to declare a public API. This may consist of documentation or be enforced by the code itself.
 
 ### Design System Website
-One of ways users interact with GOV.UK Frontend is through the [GOV.UK Design System website](https://design-system.service.gov.uk/).
+One of ways users interact with GOV.UK Frontend is through the [GOV.UK Design System website](https://test_moving_docs--govuk-design-system-preview.netlify.com/).
 
 This includes:
 
-- HTML - Documented in examples (for example, the [buttons code example](https://design-system.service.gov.uk/components/button/))
+- HTML - Documented in examples (for example, the [buttons code example](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/button/))
 - Nunjucks - Documented in examples (for example, the buttons code example)
-- SCSS - for example [colours variables](https://design-system.service.gov.uk/styles/colour/)
+- SCSS - for example [colours variables](https://test_moving_docs--govuk-design-system-preview.netlify.com/styles/colour/)
 
 ### npm package
 The other primary way is through what is [published to npm](https://github.com//package).

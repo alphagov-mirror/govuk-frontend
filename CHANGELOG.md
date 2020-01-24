@@ -34,7 +34,7 @@ If you're using Nunjucks, you can now add classes to the character count compone
 
 #### Add classes to the page wrapper
 
-If you're using Nunjucks, you can now add classes to the page wrapper using the [`containerClasses` variable](https://design-system.service.gov.uk/styles/page-template/#variables).
+If you're using Nunjucks, you can now add classes to the page wrapper using the [`containerClasses` variable](https://test_moving_docs--govuk-design-system-preview.netlify.com/styles/page-template/#variables).
 
 [Pull request #1626: Allow creating custom width containers and using them with template](https://github.com/alphagov/govuk-frontend/pull/1626).
 
@@ -42,9 +42,9 @@ If you're using Nunjucks, you can now add classes to the page wrapper using the 
 
 If you're using Sass, you can now use the `govuk-width-container` mixin to create a custom wrapper class with a specific width. You can then add that class to the following wrappers to override the width of the `govuk-width-container` class:
 
-- [page wrapper](https://design-system.service.gov.uk/styles/layout/#page-wrappers)
-- [header container](https://design-system.service.gov.uk/components/header/)
-- [footer container](https://design-system.service.gov.uk/components/footer/)
+- [page wrapper](https://test_moving_docs--govuk-design-system-preview.netlify.com/styles/layout/#page-wrappers)
+- [header container](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/header/)
+- [footer container](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/footer/)
 
 To create your custom wrapper class, include the `govuk-width-container` mixin. Pass in the width in pixels.
 
@@ -58,8 +58,8 @@ For example:
 
 If you’re using Nunjucks, you should then add your class using either the:
 
-- `containerClasses` variable in the [page template](https://design-system.service.gov.uk/styles/page-template/#variables)
-- `containerClasses` option in the [header](https://design-system.service.gov.uk/components/header/) or [footer](https://design-system.service.gov.uk/components/footer/)
+- `containerClasses` variable in the [page template](https://test_moving_docs--govuk-design-system-preview.netlify.com/styles/page-template/#variables)
+- `containerClasses` option in the [header](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/header/) or [footer](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/footer/)
 
 Use the `$govuk-page-width` Sass variable instead if all your pages are the same width.
 
@@ -67,7 +67,7 @@ Use the `$govuk-page-width` Sass variable instead if all your pages are the same
 
 #### Add attributes to the `<body>` element of a page
 
-You can now add attributes to the `<body>` element of a page, by using the [`bodyAttributes` variable](https://design-system.service.gov.uk/styles/page-template/#variables) in the page template.
+You can now add attributes to the `<body>` element of a page, by using the [`bodyAttributes` variable](https://test_moving_docs--govuk-design-system-preview.netlify.com/styles/page-template/#variables) in the page template.
 
 - [Pull request #1623: Allow attributes to be set on template <body>](https://github.com/alphagov/govuk-frontend/pull/1623).
 
@@ -226,7 +226,7 @@ If you are not using Nunjucks macros, add a `govuk-` prefix to `data-module` att
 </div>
 ```
 
-The [button](https://design-system.service.gov.uk/components/button/) and [details](https://design-system.service.gov.uk/components/details/) components now also use the `data-module` attribute for initialisation. If you are not using Nunjucks macros, add:
+The [button](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/button/) and [details](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/details/) components now also use the `data-module` attribute for initialisation. If you are not using Nunjucks macros, add:
 
 - `data-module="govuk-button"` to each `<button>` HTML tag
 - `data-module="govuk-details"` to each `<details>` HTML tag
@@ -256,7 +256,7 @@ nunjucks.configure([
 ])
 ```
 
-2. If you've extended the [page template](https://design-system.service.gov.uk/styles/page-template/), add `govuk/` to the template path:
+2. If you've extended the [page template](https://test_moving_docs--govuk-design-system-preview.netlify.com/styles/page-template/), add `govuk/` to the template path:
 
 ```nunjucks
 {% extends "govuk/template.njk" %}
@@ -288,11 +288,11 @@ Pull requests:
 
 The focus state of components now meets the new WCAG 2.1 level AA requirements.
 
-You must [update your component’s focus state](https://design-system.service.gov.uk/get-started/focus-states/) to make your design consistent with our new focus styles.
+You must [update your component’s focus state](https://test_moving_docs--govuk-design-system-preview.netlify.com/get-started/focus-states/) to make your design consistent with our new focus styles.
 
 If you've extended or created components, you can no longer use the `govuk-focusable` or `govuk-focusable-fill` Sass mixins.
 
-If you're using `govuk-focusable`, you must remove it. There’s no direct replacement, so you must [use our Sass variables to make your components consistent](https://design-system.service.gov.uk/get-started/focus-states/#make-other-focusable-elements-accessible) with GOV.UK Frontend.
+If you're using `govuk-focusable`, you must remove it. There’s no direct replacement, so you must [use our Sass variables to make your components consistent](https://test_moving_docs--govuk-design-system-preview.netlify.com/get-started/focus-states/#make-other-focusable-elements-accessible) with GOV.UK Frontend.
 
 If you're using `govuk-focusable-fill`, include the `govuk-focused-text` mixin inside your component's `:focus` selector. For example:
 
@@ -315,7 +315,7 @@ Pull requests:
 
 #### Update colours
 
-You can now use the following new colour variables that we've added to the [colour palette](https://design-system.service.gov.uk/styles/colour#main-colours):
+You can now use the following new colour variables that we've added to the [colour palette](https://test_moving_docs--govuk-design-system-preview.netlify.com/styles/colour#main-colours):
 
 - dark-blue
 - dark-grey
@@ -332,7 +332,7 @@ grey-2|mid-grey
 grey-3|light-grey
 grey-4|light-grey
 
-You should check the [contrast ratio of your colours](https://design-system.service.gov.uk/styles/colour#colour-contrast).
+You should check the [contrast ratio of your colours](https://test_moving_docs--govuk-design-system-preview.netlify.com/styles/colour#colour-contrast).
 
 If you're not using Sass, change the values of the following colours:
 
@@ -376,7 +376,7 @@ Pull requests:
 
 #### Update links from error summary components to radios and checkboxes
 
-If you've linked from an error summary component to the first input in a [radios](https://design-system.service.gov.uk/components/radios/) or [checkboxes](https://design-system.service.gov.uk/components/checkboxes/) component, the link will no longer work.
+If you've linked from an error summary component to the first input in a [radios](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/radios/) or [checkboxes](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/checkboxes/) component, the link will no longer work.
 
 This is because the `id` of the first input no longer has the suffix `-1`.
 
@@ -404,7 +404,7 @@ For example:
 
 #### Update start button icon
 
-[Start buttons](https://design-system.service.gov.uk/components/button/#start-buttons) have a new icon. Your start buttons will lose their current icons unless you replace the old icon with the new one.
+[Start buttons](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/button/#start-buttons) have a new icon. Your start buttons will lose their current icons unless you replace the old icon with the new one.
 
 If you're using Nunjucks:
 
@@ -421,7 +421,7 @@ govukButton({
 })
 ```
 
-If you're using HTML, add the SVG code from the [start button example in the Design System](https://design-system.service.gov.uk/components/button/#start-buttons).
+If you're using HTML, add the SVG code from the [start button example in the Design System](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/button/#start-buttons).
 
 [Pull request #1341: Add new start button icon](https://github.com/alphagov/govuk-frontend/pull/1341)
 
@@ -486,7 +486,7 @@ This will add the correct amount of padding depending on if there are elements a
 
 If you need to control the spacing manually, use the `.govuk-main-wrapper--l` modifier instead.
 
-The `govuk-main-wrapper` and `govuk-main-wrapper--l` Sass mixins are now deprecated. [Contact us](https://design-system.service.gov.uk/get-in-touch/) if you need to continue using these mixins.
+The `govuk-main-wrapper` and `govuk-main-wrapper--l` Sass mixins are now deprecated. [Contact us](https://test_moving_docs--govuk-design-system-preview.netlify.com/get-in-touch/) if you need to continue using these mixins.
 
 [Pull request #1493: Add automatic vertical spacing modifier for main wrapper](https://github.com/alphagov/govuk-frontend/pull/1493)
 
@@ -899,7 +899,7 @@ If you're using your own components that rely on the overflow state of the docum
 
   The accordion component lets users show and hide sections of related content on a page.
 
-  For more information see [guidance](https://design-system.service.gov.uk/components/accordion/).
+  For more information see [guidance](https://test_moving_docs--govuk-design-system-preview.netlify.com/components/accordion/).
 
   ([PR #958](https://github.com/alphagov/govuk-frontend/pull/958))
 

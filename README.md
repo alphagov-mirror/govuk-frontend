@@ -8,7 +8,7 @@ for government platforms and services.
 
 See live examples of GOV.UK Frontend components, and guidance on when to use
 them in your service, in the [GOV.UK Design
-System](https://design-system.service.gov.uk/).
+System](https://test_moving_docs--govuk-design-system-preview.netlify.com/).
 
 ## Contact the team
 
@@ -20,7 +20,7 @@ team](mailto:govuk-design-system-support@digital.cabinet-office.gov.uk) or get i
 There are 2 ways to start using GOV.UK Frontend in your app.
 
 Once installed, you will be able to use the code from the examples in the
-[GOV.UK Design System](https://design-system.service.gov.uk/)
+[GOV.UK Design System](https://test_moving_docs--govuk-design-system-preview.netlify.com/)
 in your service.
 
 ### 1. Install with npm (recommended)
@@ -55,7 +55,7 @@ You should also use:
 
 Your service will not meet level AA of WCAG 2.1 if you use [compatibility mode](https://govuk-frontend-docs-prototype.netlify.com/compatibility_mode/#use-our-old-frameworks-or-colours) to use GOV.UK Frontend with old frameworks or the old colour palette.
 
-You can also read the [accessibility statement for the GOV.UK Design System](https://design-system.service.gov.uk/accessibility/).
+You can also read the [accessibility statement for the GOV.UK Design System](https://test_moving_docs--govuk-design-system-preview.netlify.com/accessibility/).
 
 ### Accessibility warnings
 
