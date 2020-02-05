@@ -1,81 +1,109 @@
 # Testing your GOV.UK Frontend contribution
 
-Before you submit your contribution, you must:
+Before you submit your contribution, you should:
 
-- run our test files on your changes
-- update our tests or add new tests, if the tests fail
+- check your changes look right and behave correctly
+- test in supported browsers and assistive technology
+- run our automated tests, and update tests or add new tests if our tests fail
 
-If you’re not sure how to update or add tests, ask a developer to help you or [contact us](https://design-system.service.gov.uk/#support).
+[Contact us](https://design-system.service.gov.uk/#support) for help if either:
 
-You should also [contact us](https://design-system.service.gov.uk/#support) if you’re **[[changing something ‘global’]]**, so we can check how it affects GOV.UK Frontend as a whole.
+- you can’t do some of the checks or tests
+- your contribution might affect other parts of GOV.UK Frontend
 
-## Automated testing
+## 1. Lint your Sass and JavaScript
 
-### 1. Write new tests
+Do the following to lint your Sass code.
 
-You should write new tests if you’ve created a new component or feature, or added new JavaScript or Nunjucks functionality to an existing component.
+1. Install a linter in your code editor, for example [linter-sass-lint for Atom](https://atom.io/packages/linter-sass-lint).
+2. Point the linter to [GOV.UK Frontend’s sass-lint.yml file](https://github.com/alphagov/govuk-frontend/blob/master/config/.sass-lint.yml).
 
-#### If you created or updated a Sass mixin
+To lint your JavaScript code, install [Javascript Standard Style](https://standardjs.com/) and either:
 
-In `src/govuk/helpers/grid.test.js`, add your test:
+- [add it to your text editor](https://standardjs.com/#are-there-text-editor-plugins)
+- [run it from the command line](https://standardjs.com/#usage)
 
-- to the existing code - if you updated a mixin
-- at the end - if you added a mixin
+Make sure you fix any errors that the linters report.
 
-#### If you created or updated **[[add new functionality to?]]** a component **[[component, JS or Nunjucks (+outputted HTML)]]**
+## 2. Check your changes in our ‘review app’
 
-In the `src/govuk/components` folder, update or add tests to:
+In your project folder, run `npm start`, then go to `localhost:3000` in your browser to open our 'review app'.
 
-- <COMPONENT>/<COMPONENT>.test.js - if you updated an interactive component
-- <COMPONENT>/template.test.js
+Check that:
 
-Where <COMPONENT> is the name of the component you updated or created.
+- the examples in the review app look right and behave correctly with your changes
+- your design is consistent with the rest of GOV.UK Frontend
 
-## 2. Lint your Sass and JavaScript
+## 3. Test in supported browsers and assistive technology
 
-Install a linter in your code editor, for example [linter-sass-lint for Atom](https://atom.io/packages/linter-sass-lint), then point it to the following config files:
-
-- [GOV.UK Frontend’s sass-lint.yml file](https://github.com/alphagov/govuk-frontend/blob/master/config/.sass-lint.yml) to lint Sass code
-- [GOV.UK’s ...](https://github.com/alphagov/styleguides/blob/master/js.md#linting) to lint JavaScript code **[[Not a config file? Do users need to install this?]]**
-
-Make sure you fix any errors that your linter reports.
-
-## 3. Run the tests
-
-Run on the command line:
-
-```
-npm test
-```
-
-If a test fails, you’ll need to fix it.
-
-## 4. Check your design
-
-Check that your design is visually consistent with the rest of GOV.UK Frontend, and that it works:
+You should test that your contribution works:
 
 - in [recommended browsers](https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices#browsers-to-test-in)
 - with [recommended assistive technologies](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies#what-to-test)
-- in [Internet Explorer 8](/docs/installation/supporting-internet-explorer-8.md), 9 and 10, although components do need to look perfect
+- in [Internet Explorer 8](/docs/installation/supporting-internet-explorer-8.md), 9 and 10 - components do not need to look perfect
 - when your users [override colours in Windows, Firefox and Chrome](https://accessibility.blog.gov.uk/2018/08/01/supporting-users-who-change-colours-on-gov-uk/)
 
-## 5. Add examples to our 'review app'
+## 4. Run our automated tests
 
-[Deploy GOV.UK Frontend](https://github.com/alphagov/govuk-frontend/blob/master/docs/contributing/deploying.md), then open the 'review app' **[[addurl?]]** and:
+Run `npm start` on the command line to run our automated tests.
 
-- check your changes look right and work correctly
-- add an example of your updated or new component
+If a test fails, you should check your code for any errors, and fix any tests you need to.
 
-## 6. Create a pull request
+## 5. Write new tests
 
-In the pull request description, tell us:
+You should write new tests if you’ve done one of the following:
 
-- what tests you've run
-- what tools you've used to test with **[[visual?]]**
+- created a new component
+- changed or added to a component’s JavaScript code
+- changed or added to a component’s Nunjucks macro
+- created or updated a Sass mixin or function
 
-You should also include screenshots if you can.
+If you’re not sure how to write new tests, ask a developer to help you or [contact us](https://design-system.service.gov.uk/#support).
 
-Do the following if GitHub shows that the build failed when you commit your changes.
+### If you created a component
+
+Create the following files in the `src/govuk/components` folder:
+
+- `<COMPONENT>/<COMPONENT>.test.js` - to test functionality
+- `<COMPONENT>/template.test.js` - to test the Nunjucks macro
+
+Where `<COMPONENT>` is the name of the component you created.
+
+You can use the existing files in the `src/govuk/components` folder as templates for your new files.
+
+### If you changed or added to a component
+
+In the `src/govuk/components` folder, update or add tests to:
+
+- `<COMPONENT>/<COMPONENT>.test.js` - if you updated functionality
+- `<COMPONENT>/template.test.js` - if you updated the Nunjucks macro
+
+Where `<COMPONENT>` is the name of the component you changed or added to.
+
+### If you created or updated a Sass mixin or function
+
+Update or add tests In `src/govuk/<ELEMENT>/grid.test.js`, where `<ELEMENT>` is the [element you’re creating or updating a mixin for](https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/README.md)
+
+## 6. Update our snapshot tests
+
+If your component uses another component, one of our 'snapshot tests' may fail. Snapshot tests compare a component's current markup with a previously stored version.
+
+If a snapshot test fails, do the following.
+
+1. Check that the component's new markup is correct.
+2. Run `npm test -- -u src/govuk/components/<COMPONENT>` to update our snapshot test with the new markup.
+3. Commit the updated `/src/govuk/components/<COMPONENT>/__snapshots__/` folder.
+4. In the commit message, tell us you're updating the snapshot file and why.
+
+Replace `<COMPONENT>` with the name of the component you changed.
+
+## 7. Tell us what you’ve checked
+
+When you create the pull request for your contributions, list what you’ve tested and checked in the pull request description.
+
+If your contribution changes how a component looks, include before and after screenshots if you can.
+
+### If GitHub shows the build failed
 
 1. Select the '**X**' next to your commit number.
 2. Select **Details**.
