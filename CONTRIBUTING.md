@@ -76,7 +76,7 @@ See [tasks](/docs/contributing/tasks.md).
 
 ## Deploying
 
-See [deploying](/docs/contributing/deploying.md).
+See [deploying](/docs/contributing/running-locally.md).
 
 ## Releasing a new version
 
