@@ -16,7 +16,7 @@ Before you submit your contribution, you should:
 Do the following to lint your Sass code.
 
 1. Install a linter in your code editor, for example [linter-sass-lint for Atom](https://atom.io/packages/linter-sass-lint).
-2. Point the linter to [GOV.UK Frontend’s sass-lint.yml file](https://github.com/alphagov/govuk-frontend/blob/master/config/.sass-lint.yml).
+2. Point the linter to [GOV.UK Frontend’s `.sass-lint.yml` file](https://github.com/alphagov/govuk-frontend/blob/master/config/.sass-lint.yml).
 
 To lint your JavaScript code, install [Javascript Standard Style](https://standardjs.com/) and either:
 
@@ -45,13 +45,13 @@ You should test that your contribution works:
 
 ## 4. Run our automated tests
 
-Run `npm start` on the command line to run our automated tests.
+In your project folder, run `npm start` to run our automated tests.
 
-If a test fails, you should check your code for any errors, and fix any tests you need to.
+If a test fails, you should check your code for any errors, then fix any tests you need to.
 
 ## 5. Write new tests
 
-You should write new tests if you’ve done one of the following:
+You should write new tests if you’ve done any of the following:
 
 - created a new component
 - changed or added to a component’s JavaScript code
@@ -82,7 +82,7 @@ Where `<COMPONENT>` is the name of the component you changed or added to.
 
 ### If you created or updated a Sass mixin or function
 
-Update or add tests In `src/govuk/<ELEMENT>/grid.test.js`, where `<ELEMENT>` is the [element you’re creating or updating a mixin for](https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/README.md)
+Update or add tests In `src/govuk/<ELEMENT>/grid.test.js`, where `<ELEMENT>` is the [element you’re creating or updating a mixin for](https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/README.md).
 
 ## 6. Update our snapshot tests
 
@@ -92,7 +92,7 @@ If a snapshot test fails, do the following.
 
 1. Check that the component's new markup is correct.
 2. Run `npm test -- -u src/govuk/components/<COMPONENT>` to update our snapshot test with the new markup.
-3. Commit the updated `/src/govuk/components/<COMPONENT>/__snapshots__/` folder.
+3. Commit the updated file in the `/src/govuk/components/<COMPONENT>/__snapshots__/` folder.
 4. In the commit message, tell us you're updating the snapshot file and why.
 
 Replace `<COMPONENT>` with the name of the component you changed.
@@ -109,4 +109,4 @@ If your contribution changes how a component looks, include before and after scr
 2. Select **Details**.
 3. Under **Build Failed**, select **The build**.
 4. Wait for the build log to appear.
-5. Use the log to find and fix your code.
+5. Use the information in the build log to find and fix your code.
