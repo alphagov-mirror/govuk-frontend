@@ -30,11 +30,10 @@ Check that:
 
 ### Add an example
 
-You should add an example to the review app if you've changed how a component looks or the way users interact with it.
+You should add an example to the review app if the existing examples do not reflect the changes you've made.
 
 1. Open `src/govuk/components/<COMPONENT>/<COMPONENT>.yaml`, where `<COMPONENT>` is the component you've changed.
-2. Add or update parameters in the `params` list.
-3. Add or update examples in the `examples` list.
+2. Add or update examples in the `examples` list.
 
 If you've created a new component, create a new `src/govuk/<COMPONENT>/<COMPONENT>.yaml` file instead, where `<COMPONENT>` is the name of the component you've created.
 
@@ -49,7 +48,7 @@ You should test that your contribution works:
 
 ## 4. Run the automated tests
 
-In your project folder, run `npm test` to run the automated tests, including style linting.
+In your project folder, run `npm test` to run the automated tests, including linting.
 
 If a test fails, you should check your code for any errors, then fix any tests you need to.
 
@@ -85,11 +84,11 @@ Where `<COMPONENT>` is the name of the component you changed or added to.
 
 ### If you created or updated a Sass mixin or function
 
-Update or add tests in `src/govuk/<LAYER>/<LAYER>.test.js`, where `<LAYER>` is the [layer you’re creating or updating a mixin for](https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/README.md#structure).
+Update or add tests in `src/govuk/<LAYER>/<LAYER>.test.js`, where `<LAYER>` is the [layer](https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/README.md#structure) you’re creating or updating a mixin for].
 
 ## 6. Update the snapshot tests
 
-If your component uses another component, one of the [Jest 'snapshot tests'](https://jestjs.io/docs/en/snapshot-testing) may fail. Snapshot tests compare a component's current markup with a previously stored version.
+If your component uses another component, one of the [Jest snapshot tests](https://jestjs.io/docs/en/snapshot-testing) may fail. Snapshot tests compare a component's current markup with a previously stored version.
 
 If a snapshot test fails, do the following.
 
