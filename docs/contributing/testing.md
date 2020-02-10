@@ -2,37 +2,41 @@
 
 Before you submit your contribution, you should:
 
+- fix any CSS or JavaScript style errors
 - check your changes look right and behave correctly
 - test in supported browsers and assistive technology
-- run our automated tests, and update tests or add new tests if our tests fail
+- run the automated tests, and update tests if the tests fail
+- add new tests if you need to
 
-[Contact us](https://design-system.service.gov.uk/#support) for help if either:
+Let us know in your pull request or [contact us](https://design-system.service.gov.uk/#support) if either:
 
 - you can’t do some of the checks or tests
 - your contribution might affect other parts of GOV.UK Frontend
 
-## 1. Lint your Sass and JavaScript
+## 1. Fix any CSS or JavaScript style errors
 
-Do the following to lint your Sass code.
+In your project folder, run `npm test`.
 
-1. Install a linter in your code editor, for example [linter-sass-lint for Atom](https://atom.io/packages/linter-sass-lint).
-2. Point the linter to [GOV.UK Frontend’s `.sass-lint.yml` file](https://github.com/alphagov/govuk-frontend/blob/master/config/.sass-lint.yml).
+Fix any CSS or JavaScript style errors that the linting tests report.
 
-To lint your JavaScript code, install [Javascript Standard Style](https://standardjs.com/) and either:
+## 2. Check your changes in the ‘review app’
 
-- [add it to your text editor](https://standardjs.com/#are-there-text-editor-plugins)
-- [run it from the command line](https://standardjs.com/#usage)
-
-Make sure you fix any errors that the linters report.
-
-## 2. Check your changes in our ‘review app’
-
-In your project folder, run `npm start`, then go to `localhost:3000` in your browser to open our 'review app'.
+In your project folder, run `npm start`, then go to `localhost:3000` in your browser to open the 'review app'.
 
 Check that:
 
 - the examples in the review app look right and behave correctly with your changes
 - your design is consistent with the rest of GOV.UK Frontend
+
+### Add an example
+
+You should add an example to the review app if you've changed how a component looks or the way users interact with it.
+
+1. Open `src/govuk/components/<COMPONENT>/<COMPONENT>.yaml`, where `<COMPONENT>` is the component you've changed.
+2. Add or update parameters in the `params` list.
+3. Add or update examples in the `examples` list.
+
+If you've created a new component, create a new `src/govuk/<COMPONENT>/<COMPONENT>.yaml` file instead, where `<COMPONENT>` is the name of the component you've created.
 
 ## 3. Test in supported browsers and assistive technology
 
@@ -43,28 +47,27 @@ You should test that your contribution works:
 - in [Internet Explorer 8](/docs/installation/supporting-internet-explorer-8.md), 9 and 10 - components do not need to look perfect
 - when your users [override colours in Windows, Firefox and Chrome](https://accessibility.blog.gov.uk/2018/08/01/supporting-users-who-change-colours-on-gov-uk/)
 
-## 4. Run our automated tests
+## 4. Run the automated tests
 
-In your project folder, run `npm start` to run our automated tests.
+In your project folder, run `npm test` to run the automated tests, including style linting.
 
 If a test fails, you should check your code for any errors, then fix any tests you need to.
 
 ## 5. Write new tests
 
-You should write new tests if you’ve done any of the following:
+You should write new tests if you’ve created a new component, or changed the way a component works by:
 
-- created a new component
-- changed or added to a component’s JavaScript code
-- changed or added to a component’s Nunjucks macro
-- created or updated a Sass mixin or function
+- changing or adding to its JavaScript code
+- changing or adding to its Nunjucks macro
+- creating or updating a Sass mixin or function
 
-If you’re not sure how to write new tests, ask a developer to help you or [contact us](https://design-system.service.gov.uk/#support).
+If you’re not sure how to write new tests, ask a developer on your team to help you or [contact us](https://design-system.service.gov.uk/#support).
 
 ### If you created a component
 
 Create the following files in the `src/govuk/components` folder:
 
-- `<COMPONENT>/<COMPONENT>.test.js` - to test functionality
+- `<COMPONENT>/<COMPONENT>.test.js` - to test functionality if the component uses JavaScript
 - `<COMPONENT>/template.test.js` - to test the Nunjucks macro
 
 Where `<COMPONENT>` is the name of the component you created.
@@ -82,20 +85,20 @@ Where `<COMPONENT>` is the name of the component you changed or added to.
 
 ### If you created or updated a Sass mixin or function
 
-Update or add tests In `src/govuk/<ELEMENT>/grid.test.js`, where `<ELEMENT>` is the [element you’re creating or updating a mixin for](https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/README.md).
+Update or add tests in `src/govuk/<LAYER>/<LAYER>.test.js`, where `<LAYER>` is the [layer you’re creating or updating a mixin for](https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/README.md#structure).
 
-## 6. Update our snapshot tests
+## 6. Update the snapshot tests
 
-If your component uses another component, one of our 'snapshot tests' may fail. Snapshot tests compare a component's current markup with a previously stored version.
+If your component uses another component, one of the [Jest 'snapshot tests'](https://jestjs.io/docs/en/snapshot-testing) may fail. Snapshot tests compare a component's current markup with a previously stored version.
 
 If a snapshot test fails, do the following.
 
 1. Check that the component's new markup is correct.
-2. Run `npm test -- -u src/govuk/components/<COMPONENT>` to update our snapshot test with the new markup.
+2. Run `npm test -- -u src/govuk/components/<COMPONENT>` to update the snapshot test with the new markup.
 3. Commit the updated file in the `/src/govuk/components/<COMPONENT>/__snapshots__/` folder.
 4. In the commit message, tell us you're updating the snapshot file and why.
 
-Replace `<COMPONENT>` with the name of the component you changed.
+Where `<COMPONENT>` is the name of the component you changed.
 
 ## 7. Tell us what you’ve checked
 
@@ -105,7 +108,7 @@ If your contribution changes how a component looks, include before and after scr
 
 ### If GitHub shows the build failed
 
-1. Select the '**X**' next to your commit number.
+1. At the bottom of your pull request in GitHub, find the line that says **Build Failed**.
 2. Select **Details**.
 3. Under **Build Failed**, select **The build**.
 4. Wait for the build log to appear.
