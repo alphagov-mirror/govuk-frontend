@@ -84,7 +84,9 @@ Where `<COMPONENT>` is the name of the component you changed or added to.
 
 ### If you created or updated a Sass mixin or function
 
-Update or add tests in `src/govuk/<LAYER>/<LAYER>.test.js`, where `<LAYER>` is the [layer](https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/README.md#structure) you’re creating or updating a mixin for].
+Update or add tests in the `.test.js` file that matches the name of the `.scss` file you created or updated. Create the `.test.js` file if it does not exist.
+
+For example, if you updated a mixin in `src/govuk/helpers/_colour.scss`, update or add tests in `src/govuk/helpers/_colour.test.js`.
 
 ## 6. Update the snapshot tests
 
@@ -111,4 +113,4 @@ If your contribution changes how a component looks, include before and after scr
 2. Select **Details**.
 3. Under **Build Failed**, select **The build**.
 4. Wait for the build log to appear.
-5. Use the information in the build log to find and fix your code.
+5. Use the information in the build log to find the problem and fix your code.
