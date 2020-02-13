@@ -5,7 +5,7 @@ Before you submit your contribution, you should:
 - fix any CSS or JavaScript style errors
 - check your changes look right and behave correctly
 - test in supported browsers and assistive technology
-- run the automated tests, and update tests if the tests fail
+- run the automated tests, and update the tests if they fail
 - add new tests if you need to
 
 Let us know in your pull request or [contact us](https://design-system.service.gov.uk/#support) if either:
@@ -21,7 +21,7 @@ Fix any CSS or JavaScript style errors that the linting tests report.
 
 ## 2. Check your changes in the ‘review app’
 
-In your project folder, run `npm start`, then go to `localhost:3000` in your browser to open the 'review app'.
+In your project folder, run `npm start`, then go to [http://localhost:3000/]([http://localhost:3000/]) in your browser to open the 'review app'.
 
 Check that:
 
@@ -50,14 +50,14 @@ You should test that your contribution works:
 
 In your project folder, run `npm test` to run the automated tests, including linting.
 
-If a test fails, you should check your code for any errors, then fix any tests you need to.
+If a test fails, you should check your code for any errors, then update any tests you need to.
 
 ## 5. Write new tests
 
 You should write new tests if you’ve created a new component, or changed the way a component works by:
 
-- changing or adding to its JavaScript code
-- changing or adding to its Nunjucks macro
+- changing or adding to the component's JavaScript code
+- changing or adding to the component's Nunjucks macro
 - creating or updating a Sass mixin or function
 
 If you’re not sure how to write new tests, ask a developer on your team to help you or [contact us](https://design-system.service.gov.uk/#support).
@@ -99,9 +99,9 @@ If a snapshot test fails, do the following.
 3. Commit the updated file in the `/src/govuk/components/<COMPONENT>/__snapshots__/` folder.
 4. In the commit message, tell us you're updating the snapshot file and why.
 
-Where `<COMPONENT>` is the name of the component you changed.
+Where `<COMPONENT>` is the name of the component you've changed.
 
-## 7. Tell us what you’ve checked
+## 7. Tell us what you’ve tested and checked
 
 When you create the pull request for your contributions, list what you’ve tested and checked in the pull request description.
 
