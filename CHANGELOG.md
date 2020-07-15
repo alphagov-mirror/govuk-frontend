@@ -21,6 +21,7 @@ We’ve made fixes to GOV.UK Frontend in the following pull requests:
 - [#1838: Correctly camel case SVG attributes in the header and footer](https://github.com/alphagov/govuk-frontend/pull/1838)
 - [#1842: Preserve the state of conditional reveals when navigating 'back' in the browser](https://github.com/alphagov/govuk-frontend/pull/1842)
 - [#1855: Hint component can render block-level elements as valid HTML](https://github.com/alphagov/govuk-frontend/pull/1855)
+- [#1862: Fix display of warning text icon when border-box box sizing is applied globally #1862](https://github.com/alphagov/govuk-frontend/pull/1862)
 
 ## 3.7.0 (Feature release)
 
