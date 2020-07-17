@@ -13,6 +13,7 @@ We darkened `govuk-colour("dark-grey")` to improve the readability of hint text.
 Optional parameter added to the input and textarea components to enable or disable the spellcheck attribute
 
 ([PR #1859](https://github.com/alphagov/govuk-frontend/pull/1859))
+([PR #1869](https://github.com/alphagov/govuk-frontend/pull/1869))
 
 ### Fixes
 
