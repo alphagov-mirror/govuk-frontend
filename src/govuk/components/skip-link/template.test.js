@@ -10,7 +10,7 @@ const { render, getExamples } = require('../../../../lib/jest-helpers')
 const examples = getExamples('skip-link')
 
 describe('Skip link', () => {
-  describe('default example', async () => {
+  describe('default example', () => {
     it('passes accessibility tests', async () => {
       const $ = render('skip-link', examples.default)
 
