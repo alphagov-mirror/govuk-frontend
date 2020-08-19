@@ -63,7 +63,7 @@ examples:
       text: Upload your photo
     hint:
       text: Your photo may be in your Pictures, Photos, Downloads or Desktop folder. Or in an app like iPhoto.
-- name: with error message
+- name: with error message and hint
   data:
     id: file-upload-3
     name: file-upload-3
@@ -97,3 +97,39 @@ examples:
       text: Upload a file
     formGroup:
       classes: extra-class
+
+# Hidden examples are not shown in the review app, but are used for tests and HTML fixtures
+- name: classes
+  hidden: true
+  data:
+    classes: app-file-upload--custom-modifier
+- name: with describedBy
+  hidden: true
+  data:
+    describedBy: some-id
+- name: with hint and describedBy
+  hidden: true
+  data:
+    describedBy: some-id
+    hint:
+      text: Your photo may be in your Pictures, Photos, Downloads or Desktop folder. Or in an app like iPhoto.
+- name: error
+  hidden: true
+  data:
+    id: "file-upload-with-error"
+    errorMessage:
+      text: Error message
+- name: with error and describedBy
+  hidden: true
+  data:
+    describedBy: some-id
+    errorMessage:
+      text: Error message
+- name: with error, describedBy and hint
+  hidden: true
+  data:
+    describedBy: some-id
+    errorMessage:
+      text: Error message
+    hint:
+      text: hint
