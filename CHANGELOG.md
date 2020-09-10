@@ -1,6 +1,8 @@
 # Changelog
 
-## 3.9.0 (feature release)
+## Unreleased
+
+## 3.9.0 (Feature release)
 
 ### New features
 
