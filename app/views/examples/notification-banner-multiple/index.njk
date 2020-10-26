@@ -15,8 +15,8 @@
     <div class="govuk-grid-column-two-thirds">
 
         {{ govukNotificationBanner({
-          text: "Invite sent to example@email.com",
-          type: "success"
+          text: "There was a problem uploading your file. Please try again.",
+          type: "error"
         })}}
 
         {{ govukNotificationBanner({
@@ -26,7 +26,6 @@
 
         <h1 class="govuk-heading-xl">{{ pageTitle }}</h1>
 
-        <p class="govuk-body">Please note that it's not recommended to have multiple banners of the same type on the page. This page is an example for testing purposes.</p>
     </div>
   </div>
 {% endblock %}
