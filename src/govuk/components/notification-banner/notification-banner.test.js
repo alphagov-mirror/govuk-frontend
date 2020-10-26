@@ -15,17 +15,6 @@ describe('/components/notification-banner', () => {
 
         expect(activeElement).toBe('govuk-notification-banner')
       })
-
-      it('scrolls the notification banner to the top of the screen', async () => {
-        // Wait until 'domcontentloaded' to have correct coordinates for element position
-        await page.goto(`${baseUrl}/examples/notification-banner`, { waitUntil: 'domcontentloaded' })
-
-        const positionFromTopOfViewport = await page.$eval('.govuk-notification-banner', (elem) => {
-          return elem.getBoundingClientRect().top
-        })
-
-        expect(positionFromTopOfViewport).toEqual(0)
-      })
     })
   })
 
@@ -48,7 +37,7 @@ describe('/components/notification-banner', () => {
 
         const activeElementTextContent = await page.evaluate(() => document.activeElement.textContent)
 
-        expect(activeElementTextContent).toContain('Invite sent to example@email.com')
+        expect(activeElementTextContent).toContain('There was a problem uploading your file. Please try again.')
       })
     })
   })
