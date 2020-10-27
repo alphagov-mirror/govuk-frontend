@@ -87,15 +87,15 @@ examples:
           <li><a href="#" class="govuk-notification-banner__link">government-strategy-v3-FINAL.pdf</a></li>
           <li><a href="#" class="govuk-notification-banner__link">government-strategy-v4-FINAL-v2.pdf</a></li>
       </ul>
-- name: auto-focus as is set to false, with type as success
+- name: auto-focus is enabled by setting role=alert
   data:
     type: success
-    autoFocus: false
+    disableAutoFocus: true
     text: Email sent to example@email.com
-- name: data-auto-focus is set without role=alert
+- name: auto-focus is disabled, with type as success
   data:
     type: success
-    role: banner
+    disableAutoFocus: true
     text: Email sent to example@email.com
 
 # Hidden examples are not shown in the review app, but are used for tests and HTML fixtures
