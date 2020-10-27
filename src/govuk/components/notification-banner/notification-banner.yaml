@@ -90,12 +90,16 @@ examples:
 - name: auto-focus is enabled by setting role=alert
   data:
     type: success
-    disableAutoFocus: true
     text: Email sent to example@email.com
-- name: auto-focus is disabled, with type as success
+- name: auto-focus is disabled, with role=alert
   data:
     type: success
     disableAutoFocus: true
+    text: Email sent to example@email.com
+- name: auto-focus is enabled with tabindex=0
+  data:
+    type: success
+    tabindex: 0
     text: Email sent to example@email.com
 
 # Hidden examples are not shown in the review app, but are used for tests and HTML fixtures
