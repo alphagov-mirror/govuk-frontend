@@ -47,13 +47,6 @@ describe('Notification-banner', () => {
       expect($component.attr('data-module')).toEqual('govuk-notification-banner')
     })
 
-    it('does not have data-auto-focus attribute to focus component on page load', () => {
-      const $ = render('notification-banner', examples.default)
-      const $component = $('.govuk-notification-banner')
-
-      expect($component.attr('data-auto-focus')).not.toEqual('govuk-auto-focus')
-    })
-
     it('renders header container', () => {
       const $ = render('notification-banner', examples.default)
       const $header = $('.govuk-notification-banner__header')
@@ -141,13 +134,6 @@ describe('Notification-banner', () => {
       expect(ariaAttr).toEqual('my-id')
     })
 
-    it('renders data-auto-focus attribute to focus component on page load', () => {
-      const $ = render('notification-banner', examples['autoFocus as true'])
-
-      const $component = $('.govuk-notification-banner')
-      expect($component.attr('data-auto-focus')).toEqual('true')
-    })
-
     it('removes tabindex attribute so component is not focusable', () => {
       const $ = render('notification-banner', examples['tabindex as false and type as success'])
 
@@ -155,11 +141,11 @@ describe('Notification-banner', () => {
       expect($component.attr('tabindex')).toBeUndefined()
     })
 
-    it('removes data-auto-focus attribute so component is not focused on page load', () => {
-      const $ = render('notification-banner', examples['auto-focus as is set to false, with type as success'])
+    it('adds the data-auto-focus attribute so component is not focused on page load', () => {
+      const $ = render('notification-banner', examples['auto-focus is disabled, with type as success'])
 
       const $component = $('.govuk-notification-banner')
-      expect($component.attr('data-auto-focus')).toBeUndefined()
+      expect($component.attr('data-disable-auto-focus')).toBeTruthy()
     })
 
     it('renders classes', () => {
