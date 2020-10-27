@@ -41,7 +41,9 @@ NotificationBanner.prototype.setFocus = function () {
   }
 
   // Set tabindex to -1 so to make the element focusable with JavaScript (the element will not be reachable via sequential keyboard navigation).
-  $module.setAttribute('tabindex', '-1')
+  if (!$module.getAttribute('tabindex')) {
+    $module.setAttribute('tabindex', '-1')
+  }
 
   this.$module.focus()
 }
