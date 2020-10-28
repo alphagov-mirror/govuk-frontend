@@ -5,64 +5,22 @@ const PORT = configPaths.ports.test
 
 const baseUrl = 'http://localhost:' + PORT
 
-describe('/components/notification-banner', () => {
-  describe('/examples/notification-banner', () => {
-    describe('when JavaScript is available', () => {
-      it('focuses the notification banner', async () => {
-        await page.goto(`${baseUrl}/examples/notification-banner`, { waitUntil: 'load' })
+describe('/components/notification-banner/with-type-as-success', () => {
+  describe('when JavaScript is available', () => {
+    it('has the correct tabindex to be focused with JavaScript', async () => {
+      await page.goto(baseUrl + '/components/notification-banner/with-type-as-success/preview', { waitUntil: 'load' })
 
-        const activeElement = await page.evaluate(() => document.activeElement.dataset.module)
+      const tabindex = await page.$eval('.govuk-notification-banner', el => el.getAttribute('tabindex'))
 
-        expect(activeElement).toBe('govuk-notification-banner')
-      })
+      expect(tabindex).toEqual('-1')
     })
-  })
 
-  describe('/examples/notification-banner-and-error-summary', () => {
-    describe('when there is an error summary on the page', () => {
-      it('the notification banner is not focused and the error summary is', async () => {
-        await page.goto(`${baseUrl}/examples/notification-banner-and-error-summary`, { waitUntil: 'load' })
+    it('is automatically focused when the page loads', async () => {
+      await page.goto(baseUrl + '/components/notification-banner/with-type-as-success/preview', { waitUntil: 'load' })
 
-        const activeElement = await page.evaluate(() => document.activeElement.dataset.module)
+      const activeElement = await page.evaluate(() => document.activeElement.dataset.module)
 
-        expect(activeElement).toBe('govuk-error-summary')
-      })
-    })
-  })
-
-  describe('/examples/notification-banner-multiple', () => {
-    describe('when there are multiple notification banners on the page', () => {
-      it('the first one on the page is focused', async () => {
-        await page.goto(`${baseUrl}/examples/notification-banner-multiple`, { waitUntil: 'load' })
-
-        const activeElementTextContent = await page.evaluate(() => document.activeElement.textContent)
-
-        expect(activeElementTextContent).toContain('There was a problem uploading your file. Please try again.')
-      })
-    })
-  })
-
-  describe('components/notification-banner/auto-focus-as-is-set-to-false,-with-type-as-success', () => {
-    describe('when auto-focus is set to false', () => {
-      it('does not focus the notification banner', async () => {
-        await page.goto(`${baseUrl}/components/notification-banner/auto-focus-as-is-set-to-false,-with-type-as-success/preview`, { waitUntil: 'load' })
-
-        const activeElement = await page.evaluate(() => document.activeElement.dataset.module)
-
-        expect(activeElement).not.toBe('govuk-notification-banner')
-      })
-    })
-  })
-
-  describe('components/notification-banner/data-auto-focus-is-set-without-role=alert/', () => {
-    describe('when role="alert" is not set', () => {
-      it('does not focus the notification banner', async () => {
-        await page.goto(`${baseUrl}/components/notification-banner/data-auto-focus-is-set-without-role=alert/preview`, { waitUntil: 'load' })
-
-        const activeElement = await page.evaluate(() => document.activeElement.dataset.module)
-
-        expect(activeElement).not.toBe('govuk-notification-banner')
-      })
+      expect(activeElement).toBe('govuk-notification-banner')
     })
   })
 })
