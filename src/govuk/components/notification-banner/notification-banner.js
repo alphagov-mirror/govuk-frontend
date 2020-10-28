@@ -1,5 +1,3 @@
-import '../../vendor/polyfills/Element/prototype/classList'
-
 function NotificationBanner ($module) {
   this.$module = $module
 }
