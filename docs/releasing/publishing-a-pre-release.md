@@ -28,6 +28,6 @@ Projects can point to this branch in their package.json, instead of to the publi
 
 ## Preview your changes
 
-1. If you need to update an existing project to use the pre-release, copy the command that displays after the `Success!`message. If the `Success!` message does not display, [contact the Design System team](https://design-system.service.gov.uk/get-in-touch/) and we'll help you.
+1. If you need to update an existing project to use the pre-release, copy the command that displays after the `Success!`message.
 
 2. Navigate to the project in the command line and run the success notification command. Running this command makes the project point to the pre-release branch, instead of to the published [GOV.UK Frontend npm package](https://www.npmjs.com/package/govuk-frontend). You can now preview your trial changes to GOV.UK Frontend.
