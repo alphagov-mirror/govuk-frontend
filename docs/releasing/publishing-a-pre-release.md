@@ -2,7 +2,7 @@
 
 This pre-release guidance is aimed at Design System team members. If you're an external contributor who needs to create a pre-release, please [contact the Design System team](https://design-system.service.gov.uk/get-in-touch/) and we'll do it for you.
 
-Before you use a pre-release, you need to make changes to GOV.UK Frontend. Then follow these instructions.
+Before you publish a pre-release, you need to have committed a code change to GOV.UK Frontend. Then follow these instructions.
 
 Use pre-releases when you:
 - [work on developing a component or pattern](https://design-system.service.gov.uk/community/develop-a-component-or-pattern/) for the GOV.UK Design System
