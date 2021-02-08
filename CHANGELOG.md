@@ -11,18 +11,22 @@
 #### Allow users to accept or reject cookies with a cookie banner
 
 You can now [use cookie banners](https://design-system.service.gov.uk/components/cookie-banner/) to allow users to accept or reject cookies which are not essential for making your service work.
+
 This was added in [pull request #2131: Add cookie banner component and button groups](https://github.com/alphagov/govuk-frontend/pull/2131)
 
 #### Group buttons and links
 
 You can now use a button group when you place two or more buttons together.
+
 Any links you include within a button group now line up visually with the buttons.
+
 Read more about [button groups on the Design System’s button page](https://design-system.service.gov.uk/components/button/#grouping-buttons).
 
 This was added in [pull request #2114: Add button groups for use in cookie banner](https://github.com/alphagov/govuk-frontend/pull/2114).
 
 #### Change the style of table captions
 You can now make table captions larger or smaller by applying the `govuk-table__caption--xl`, `govuk-table__caption--l`, `govuk-table__caption--m` or `govuk-table__caption--s` classes.
+
 This was added in [pull request #2048: Add modifiers for table captions](https://github.com/alphagov/govuk-frontend/pull/2048).
 
 ### Fixes
