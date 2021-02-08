@@ -25,6 +25,7 @@ Read more about [button groups on the Design System’s button page](https://des
 This was added in [pull request #2114: Add button groups for use in cookie banner](https://github.com/alphagov/govuk-frontend/pull/2114).
 
 #### Change the style of table captions
+
 You can now make table captions larger or smaller by applying the `govuk-table__caption--xl`, `govuk-table__caption--l`, `govuk-table__caption--m` or `govuk-table__caption--s` classes.
 
 This was added in [pull request #2048: Add modifiers for table captions](https://github.com/alphagov/govuk-frontend/pull/2048).
