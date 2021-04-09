@@ -51,7 +51,7 @@
 /// Provides the default unvisited, visited, hover and active states for links.
 ///
 /// If you use this mixin in a component you must also include the
-/// govuk-link-common mixin in order to get the focus state.
+/// govuk-link-common mixin in order to get the correct focus and hover states.
 ///
 /// @example scss
 ///   .govuk-component__link {
@@ -101,7 +101,7 @@
 /// Provides the error unvisited, visited, hover and active states for links.
 ///
 /// If you use this mixin in a component you must also include the
-/// govuk-link-common mixin in order to get the focus state.
+/// govuk-link-common mixin in order to get the correct focus and hover states.
 ///
 /// @example scss
 ///   .govuk-component__link {
@@ -148,7 +148,7 @@
 /// Provides the success unvisited, visited, hover and active states for links.
 ///
 /// If you use this mixin in a component you must also include the
-/// govuk-link-common mixin in order to get the focus state.
+/// govuk-link-common mixin in order to get the correct focus and hover states.
 ///
 /// @example scss
 ///   .govuk-component__link {
@@ -196,7 +196,7 @@
 /// regardless of visited state.
 ///
 /// If you use this mixin in a component you must also include the
-/// govuk-link-common mixin in order to get the focus state.
+/// govuk-link-common mixin in order to get the correct focus and hover states.
 ///
 /// @example scss
 ///   .govuk-component__link {
@@ -236,7 +236,7 @@
 /// navigation components, such as breadcrumbs or the back link.
 ///
 /// If you use this mixin in a component you must also include the
-/// govuk-link-common mixin in order to get the focus state.
+/// govuk-link-common mixin in order to get the correct focus and hover states.
 ///
 /// @example scss
 ///   .govuk-component__link {
@@ -271,7 +271,7 @@
 /// Overrides the colour of links to work on a dark background.
 ///
 /// If you use this mixin in a component you must also include the
-/// govuk-link-common mixin in order to get the focus state.
+/// govuk-link-common mixin in order to get the correct focus and hover states.
 ///
 /// @example scss
 ///   .govuk-component__link {
@@ -314,7 +314,7 @@
 /// that you’ve visited it before is not important.
 ///
 /// If you use this mixin in a component you must also include the
-/// govuk-link-common mixin in order to get the focus state.
+/// govuk-link-common mixin in order to get the correct focus and hover states.
 ///
 /// @example scss
 ///   .govuk-component__link {
