@@ -12,6 +12,10 @@
   @include govuk-typography-common;
   @include govuk-link-decoration;
 
+  &:hover {
+    @include govuk-link-hover-decoration;
+  }
+
   &:focus {
     @include govuk-focused-text;
   }
@@ -34,11 +38,11 @@
   @if ($govuk-link-underline-offset) {
     text-underline-offset: $govuk-link-underline-offset;
   }
+}
 
+@mixin govuk-link-hover-decoration {
   @if ($govuk-link-hover-underline-thickness) {
-    &:hover {
-      text-decoration-thickness: $govuk-link-hover-underline-thickness;
-    }
+    text-decoration-thickness: $govuk-link-hover-underline-thickness;
   }
 }
 
